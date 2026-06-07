@@ -52,13 +52,13 @@
 
 **********************************************/
 
-/* 
+/*
 
 	font-family: 'Inter', sans-serif;
 
 */
 
-/*** 
+/***
 
 ====================================================================
 	Attachment Css Files
@@ -79,7 +79,7 @@
 @import url('odometer-theme-default.css');
 @import url('jquery.bootstrap-touchspin.css');
 
-/*** 
+/***
 
 ====================================================================
 	Main Slider
@@ -132,7 +132,7 @@
 	bottom: 0px;
 	z-index: 1;
 	pointer-events: none;
-	background-image: url(../images/main-slider/pattern-1.png);
+	/* background-image: url(../images/main-slider/pattern-1.png); */
 	background-position: bottom center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -281,6 +281,22 @@
 	padding-bottom: 0px;
 }
 
+.slider-one_video-column,
+.slider-one_video-column .slider-one_image-outer,
+.slider-one_video-column .slider-one_image{
+	height: 100%;
+}
+
+.slider-one_video-column .slider-one_image-outer{
+	min-height: min(72vh, 620px);
+}
+
+.slider-one_video-column .slider-one_image{
+	width: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
 .slider-one_image{
 	position: relative;
 	transition:all 900ms ease;
@@ -292,12 +308,43 @@
     clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
 }
 
-.slider-one_image img{
+.slider-one_image img,
+.slider-one_video-media{
 	display: block;
 	max-width: 100%;
 	max-height: 72vh;
 	height: auto;
 	object-fit: contain;
+}
+
+.slider-one_video-media{
+	width: min(100%, 560px);
+	border-radius: 8px;
+}
+
+.slider-one_video-column .slider-one_video-media{
+	width: 100%;
+	height: 100%;
+	max-width: none;
+	max-height: none;
+	border-radius: 0px;
+	object-fit: cover;
+}
+
+@media only screen and (min-width: 992px){
+	.slider-one_video-column{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		width: 42vw;
+		max-width: 42vw;
+		padding: 0px;
+	}
+
+	.slider-one_video-column .slider-one_image-outer{
+		min-height: 100vh;
+	}
 }
 
 .slider-one_image lottie-player{
@@ -350,7 +397,7 @@
 	}
 }
 
-/*** 
+/***
 
 ====================================================================
 	Services One
@@ -551,7 +598,7 @@
 	height: 102px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	About One
@@ -671,7 +718,7 @@
 	font-family: 'Inter', sans-serif;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Choose One
@@ -737,7 +784,7 @@
 	color: var(--color-three);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Answer One
@@ -1053,7 +1100,7 @@
 	color:var(--white-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Testimonial One
@@ -1185,7 +1232,7 @@
 	background-color: rgba(var(--main-color-rgb), 1);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Steps One
@@ -1329,7 +1376,7 @@
     background: linear-gradient(to top, rgba(var(--color-two-rgb), 1) 0%, rgba(var(--white-color-rgb), 0) 100%);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Price One
@@ -1393,7 +1440,7 @@
 }
 
 .pricing-tabs .tabs-content .tab.active-tab{
-	display:block;	
+	display:block;
 }
 
 .pricing-tabs .buttons-outer{
@@ -1697,7 +1744,7 @@
 	color: var(--white-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Faq One
@@ -1780,7 +1827,7 @@
 	position: relative;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Accordion Style
@@ -1857,7 +1904,7 @@
 }
 
 .accordion-box_two .block .acc-btn.active {
-	
+
 }
 
 .accordion-box_two .block .acc-btn.active .icon-outer .icon-plus{
@@ -1865,7 +1912,7 @@
 }
 
 .accordion-box_two .block .acc-btn.active .icon-outer{
-	
+
 }
 
 .accordion-box_two .block .acc-content{
@@ -1874,15 +1921,15 @@
 }
 
 .accordion-box_two .block .acc-content .content-text{
-	
+
 }
 
 .accordion-box_two .block.active-block{
-	
+
 }
 
 .accordion-box_two .block .acc-content.current{
-	display:block;	
+	display:block;
 }
 
 .accordion-box_two .block .content{
@@ -1899,10 +1946,10 @@
 }
 
 .accordion-box_two .block.active-block .text{
-	
+
 }
 
-/*** 
+/***
 
 ====================================================================
 	Social One
@@ -2013,7 +2060,7 @@
     background: linear-gradient(to bottom, rgba(var(--color-seven-rgb), 0.50) 0%, rgba(var(--white-color-rgb), 0) 100%);
 }
 
-/*** 
+/***
 
 ====================================================================
 	News One
@@ -2200,7 +2247,7 @@
 	margin-top: 25px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	CTA One
@@ -2334,7 +2381,7 @@
 	bottom: 95px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Banner One
@@ -2462,7 +2509,7 @@
 	color: var(--color-six);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Assistance One
@@ -2690,7 +2737,7 @@
 	background-color: rgba(var(--main-color-rgb), 1);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Livechat One
@@ -2811,7 +2858,7 @@
 	color: var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Counter One
@@ -2917,7 +2964,7 @@
 	transform: scale(1,1);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Conversation One
@@ -3131,7 +3178,7 @@
 	color:var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Clients One
@@ -3204,7 +3251,7 @@
 	background: rgba(var(--white-color-rgb), 0.10);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Order One
@@ -3237,7 +3284,7 @@
 	padding-right: 45px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Accordion Style
@@ -3307,7 +3354,7 @@
 }
 
 .accordion-box_three .block .acc-btn.active {
-	
+
 }
 
 .accordion-box_three .block .acc-content{
@@ -3316,11 +3363,11 @@
 }
 
 .accordion-box_three .block.active-block{
-	
+
 }
 
 .accordion-box_three .block .acc-content.current{
-	display:block;	
+	display:block;
 }
 
 .accordion-box_three .block .content{
@@ -3350,7 +3397,7 @@
 	color: var(--white-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Testimonial Two
@@ -3543,7 +3590,7 @@
 	background-color: var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Tools One
@@ -3721,7 +3768,7 @@
 	background-repeat: no-repeat;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Community One
@@ -3802,7 +3849,7 @@
 	margin-top: 40px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Slider Two
@@ -4370,7 +4417,7 @@
 	padding-right: 60px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Testimonial Three
@@ -4441,7 +4488,7 @@
 	background-color: rgba(var(--main-color-rgb), 1);
 }
 
-/*** 
+/***
 
 ====================================================================
 	CTA Two
@@ -4706,7 +4753,7 @@
 	color: var(--white-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Choose Two
@@ -4775,7 +4822,7 @@
 	color: var(--white-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	CTA Three
@@ -4824,7 +4871,7 @@
 	position: relative;
 }
 
-/*** 
+/***
 
 ====================================================================
 	News Two
@@ -4919,12 +4966,12 @@
 	pointer-events: none;
 	box-shadow: 0px;
 }
-  
+
 .news-block_two-inner:hover .news-block_two-hover{
 	opacity:1;
 }
 
-/*** 
+/***
 
 ====================================================================
 	CTA Four
@@ -5098,7 +5145,7 @@
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
 	-o-transition: all 300ms ease;
-	transition: all 300ms ease;	
+	transition: all 300ms ease;
 }
 
 .page-title .bread-crumb li a:hover{
@@ -5366,7 +5413,7 @@
 	opacity: 1;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Clients Two
@@ -5404,7 +5451,7 @@
 	background-color: var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Video One
@@ -5555,7 +5602,7 @@
 	padding-bottom: 10px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Price Three
@@ -5574,7 +5621,7 @@
     color: #D093E8;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Service Detail
@@ -5615,7 +5662,7 @@
 	display: block;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Service Two
@@ -5669,7 +5716,7 @@
 	color: var(--color-six);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Solution One
@@ -5944,7 +5991,7 @@
 	background-color: var(--color-four);
 }
 
-/*** 
+/***
 
 ====================================================================
 	News Three
@@ -5961,7 +6008,7 @@
 	margin-top: 20px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Styled Pagination
@@ -6003,7 +6050,7 @@
 
 .styled-pagination li.prev a,
 .styled-pagination li.next a{
-	
+
 }
 
 .styled-pagination li a:hover,
@@ -6438,7 +6485,7 @@
 	padding: 26px 30px;
 	font-size: 22px;
 	font-weight: 400;
-	line-height: 32px; 
+	line-height: 32px;
 	margin-top: 25px;
 	border-radius: 8px;
 	margin-bottom: 35px;
@@ -6753,7 +6800,7 @@
 	color: var(--color-six);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Comment Form
@@ -6828,7 +6875,7 @@
 }
 
 .comment-form .form-group button{
-	
+
 }
 
 .comment-form label{
@@ -6840,7 +6887,7 @@
 	color: var(--color-six);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Team Two
@@ -6854,7 +6901,7 @@
 	background-color: var(--color-four);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Team Detail
@@ -7066,7 +7113,7 @@
 	background-color: var(--color-nine);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Default Form
@@ -7150,7 +7197,7 @@
 	border-color:var(--white-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Price Four
@@ -7198,7 +7245,7 @@
 	color: var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Testimonial Four
@@ -7216,7 +7263,7 @@
 	margin-top: 10px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Contact Info
@@ -7297,7 +7344,7 @@
 .contact-form input.error,
 .contact-form select.error,
 .contact-form textarea.error{
-	border-color:#ff0000 !important;	
+	border-color:#ff0000 !important;
 }
 
 .contact-form label.error{
@@ -7308,7 +7355,7 @@
 	text-transform:uppercase;
 	font-size:12px;
 	color:#ff0000;
-	font-weight:500;	
+	font-weight:500;
 }
 
 .contact-social_box{
@@ -7334,7 +7381,7 @@
 	background-color: var(--main-color);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Map One
@@ -7356,7 +7403,7 @@
 	filter: grayscale(100%);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Not Found
@@ -7396,7 +7443,7 @@
 	margin-top:30px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Register One
@@ -7432,7 +7479,7 @@
 	color: var(--color-six);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Register Form
@@ -7607,7 +7654,7 @@
 
 .register-form .check-box input[type="checkbox"]:checked + label:after {
 	max-width: 20px;
-	opacity: 1;	
+	opacity: 1;
 }
 
 .register-form .forgot-psw{
@@ -7643,7 +7690,7 @@
 }
 
 .register-form .submit-btn:hover{
-	
+
 }
 
 .register-form .form-group .icon{
