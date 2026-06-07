@@ -1027,7 +1027,7 @@
 	line-height: 1em;
 	cursor: pointer;
 	display: none;
-	color:var(--white-color);
+	color:var(--black-color);
 	font-family: "flaticon_gymfit-flat";
 }
 
