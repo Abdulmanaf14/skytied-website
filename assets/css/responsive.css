@@ -435,7 +435,8 @@
 	}
 
 	.slider-one .swiper-slide{
-		padding: 0px;
+		align-items: flex-start;
+		padding: 95px 0px 20px;
 	}
 
 	.slider-one_heading{
@@ -456,16 +457,16 @@
 	}
 
 	.slider-one_image-outer{
-		min-height: 260px;
+		min-height: 230px;
 	}
 
 	.slider-one_image img,
 	.slider-one_image lottie-player{
-		max-height: 34vh;
+		max-height: 30vh;
 	}
 
 	.slider-one_image lottie-player{
-		height: 34vh;
+		height: 30vh;
 	}
 
 	.faq-phone_box{
