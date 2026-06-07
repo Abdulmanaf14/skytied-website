@@ -11,7 +11,7 @@
 .main-footer{
 	position:relative;
 	margin-top: -100px;
-	background-color: var(--color-two);
+	background-color: var(--main-color);
 }
 
 .main-footer .footer_pattern{
@@ -22,6 +22,7 @@
 	bottom: 0px;
 	background-position: center bottom;
 	background-repeat: no-repeat;
+	opacity: 0.1;
 }
 
 .main-footer .widgets-section{
@@ -32,7 +33,7 @@
 .main-footer .footer-upper-box{
 	position: relative;
 	padding: 50px 0px 50px;
-	border-bottom: 1px solid rgba(var(--white-color-rgb), 0.07);
+	border-bottom: 1px solid rgba(var(--white-color-rgb), 0.1);
 }
 
 .footer-widget{
@@ -44,24 +45,64 @@
 	position: relative;
 	padding: 34px 35px;
 	border-radius: 8px;
-	background-color: var(--color-seven);
-	border: 1px solid rgba(var(--white-color-rgb), 0.07);
+	background-color: rgba(var(--white-color-rgb), 0.05);
+	border: 1px solid rgba(var(--white-color-rgb), 0.1);
 }
 
 .footer-title{
 	position: relative;
 	font-weight: 600;
 	font-size: 20px;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 	text-transform: capitalize;
-	color: var(--color-four);
+	color: var(--white-color);
 }
 
 .footer-newsletter_text{
 	position: relative;
 	font-size: 17px;
 	line-height: 27px;
-	color: var(--color-four);
+	color: var(--white-color);
+	opacity: 0.8;
+}
+
+.footer-text{
+	position: relative;
+	font-size: 17px;
+	line-height: 27px;
+	color: var(--white-color);
+	opacity: 0.8;
+}
+
+.footer-contact_list{
+	position: relative;
+}
+
+.footer-contact_list li{
+	position: relative;
+	margin-bottom: 15px;
+	font-size: 16px;
+	color: var(--white-color);
+	opacity: 0.8;
+	padding-left: 30px;
+}
+
+.footer-contact_list li .icon{
+	position: absolute;
+	left: 0px;
+	top: 5px;
+	color: var(--white-color);
+	opacity: 1;
+}
+
+.footer-contact_list li a{
+	color: var(--white-color);
+	transition: all 300ms ease;
+}
+
+.footer-contact_list li a:hover{
+	opacity: 1;
+	color: var(--color-eight);
 }
 
 /* Newsletter Box */
@@ -95,9 +136,9 @@
     -webkit-transition: all 500ms ease;
     -ms-transition: all 500ms ease;
     -o-transition: all 500ms ease;
-    color:var(--color-six);
+    color:var(--white-color);
     background: none;
-	border: 1px solid rgba(var(--white-color-rgb), 0.07);
+	border: 1px solid rgba(var(--white-color-rgb), 0.2);
 }
 
 .newsletter-box .form-group .icon{
@@ -105,7 +146,7 @@
 	left: 18px;
 	top: 20px;
 	font-size: 18px;
-	color: var(--main-color);
+	color: var(--white-color);
 }
 
 .newsletter-box .form-group button {
@@ -128,38 +169,45 @@
 	position: relative;
 	font-weight: 500;
 	font-size: 16px;
-	color: var(--color-three);
+	color: var(--white-color);
+	opacity: 0.8;
 }
 
 .footer-pages_list li a:hover{
-	color: var(--main-color);
+	opacity: 1;
+	color: var(--white-color);
+	text-decoration: underline;
 }
 
 .footer-lists_outer{
 	position: relative;
-	padding-left: 70px;
+	padding-left: 0px;
 }
 
 .footer-lists_outer .column:last-child{
 	position: relative;
-	left: 40px;
+	left: 0px;
 }
 
 .main-footer .footer-bottom{
 	position: relative;
 	padding: 30px 0px;
-	background-color: var(--color-seven);
+	background-color: rgba(0, 0, 0, 0.1);
+	border-top: 1px solid rgba(var(--white-color-rgb), 0.1);
 }
 
 .footer-copyright{
 	position: relative;
 	font-size: 17px;
-	color: var(--color-three);
+	color: var(--white-color);
+	opacity: 0.8;
 }
 
 .footer-copyright a{
 	position: relative;
-	color: var(--main-color);
+	color: var(--white-color);
+	opacity: 1;
+	font-weight: 600;
 }
 
 .footer-social_box{
@@ -176,8 +224,8 @@
 	border-radius: 50px;
 	text-align: center;
 	display: inline-block;
-	color: var(--main-color);
-	border: 1px solid rgba(var(--main-color-rgb), 0.15);
+	color: var(--white-color);
+	border: 1px solid rgba(var(--white-color-rgb), 0.3);
 }
 
 .footer-social_box span{
@@ -185,13 +233,13 @@
 	font-size: 16px;
 	font-weight: 500;
 	margin-right: 10px;
-	color: var(--color-four);
+	color: var(--white-color);
 }
 
 .footer-social_box a:hover{
-	border-color: var(--main-color);
-	background-color: var(--main-color);
-	color: var(--white-color);
+	border-color: var(--white-color);
+	background-color: var(--white-color);
+	color: var(--main-color);
 }
 
 .main-footer .footer-newsletter h5{
