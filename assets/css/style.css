@@ -7694,10 +7694,81 @@
 }
 
 .register-form .form-group .icon{
-	position: absolute;
-	right: 20px;
-	bottom: 20px;
-	z-index: 1;
-	font-size: 18px;
-	color: var(--color-six);
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        z-index: 1;
+        font-size: 18px;
+        color: var(--color-six);
+}
+
+/* Slider One Arrows */
+.slider-one_arrows {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    pointer-events: none;
+}
+
+.main-slider-prev,
+.main-slider-next {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+}
+
+.main-slider-prev:hover,
+.main-slider-next:hover {
+    background: var(--main-color);
+    border-color: var(--main-color);
+    color: #fff;
+}
+
+/* Pagination */
+.main-slider .swiper-pagination {
+    bottom: 30px !important;
+}
+
+.main-slider .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #beb7b7;
+    opacity: 0.3;
+    margin: 0 5px !important;
+    transition: all 0.3s ease;
+}
+
+.main-slider .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--main-color);
+    transform: scale(1.2);
+}
+
+@media (max-width: 767px) {
+    .slider-one_arrows {
+        padding: 0 15px;
+    }
+    .main-slider-prev,
+    .main-slider-next {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
 }
