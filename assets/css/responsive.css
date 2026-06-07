@@ -40,11 +40,6 @@
 		padding-right:30px;
 	}
 
-	.slider-one_percentage{
-		right: 0px;
-		top: 30px;
-	}
-
 	.answer-one_list li{
 		max-width: 100%;
 	}
@@ -87,11 +82,6 @@
 
 	.main-header .main-menu .navigation > li{
 		margin-right: 20px;
-	}
-
-	.slider-one_percentage{
-		right: 15px;
-		top: 15px;
 	}
 
 	.choose-one .inner-container{
@@ -445,11 +435,37 @@
 	}
 
 	.slider-one .swiper-slide{
-		padding: 100px 0px 150px;
+		padding: 0px;
+	}
+
+	.slider-one_heading{
+		font-size: 38px;
+		line-height: 1.1;
+		margin-top: 18px;
+		margin-bottom: 20px;
+	}
+
+	.slider-one_text{
+		font-size: 15px;
+		line-height: 24px;
+		margin-bottom: 24px;
 	}
 
 	.slider-one_image-column{
-		margin-top: 40px;
+		margin-top: 20px;
+	}
+
+	.slider-one_image-outer{
+		min-height: 260px;
+	}
+
+	.slider-one_image img,
+	.slider-one_image lottie-player{
+		max-height: 34vh;
+	}
+
+	.slider-one_image lottie-player{
+		height: 34vh;
 	}
 
 	.faq-phone_box{
@@ -457,7 +473,12 @@
 	}
 
 	.slider-one_graph{
-		left: 15px;
+		left: 0px;
+	}
+
+	.slider-one_graph lottie-player{
+		width: 130px !important;
+		height: 130px !important;
 	}
 
 	.about-one_content-column{
@@ -927,14 +948,12 @@
 @media only screen and (max-width: 479px) {
 	
 	.sec-title_heading br,
-	.slider-one_graph,
 	.cta-icon_one,
 	.cta-one_cards,
 	.sec-title_text br,
 	.social-one .inner-container .social-one_bg,
 	.social-one .inner-container .social-one_bg-two,
 	.answer-one_scroll-content .text .icon,
-	.slider-one_percentage,
 	.slider-one_title i,
 	.language-dropdown{
 		display: none;
