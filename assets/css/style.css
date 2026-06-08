@@ -1966,12 +1966,12 @@
 	position: relative;
 	z-index: 10;
 	padding: 100px 0px 150px;
-	background-color: var(--color-four);
+	/* background-color: var(--color-four); */
 }
 
-.social-one .sec-title_title{
-	color: #D093E8;
-}
+/* .social-one .sec-title_title{
+	color: ;
+} */
 
 .social-one .sec-title{
 	margin-bottom: 100px;
@@ -2006,7 +2006,7 @@
 	right: 0px;
 	bottom: 0px;
 	z-index: -1;
-	background: url(../images/background/social-one_blurr.png) no-repeat;
+	background: url(../images/background/circle.png) no-repeat;
 	background-size: cover;
 }
 
