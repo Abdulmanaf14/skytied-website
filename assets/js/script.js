@@ -428,7 +428,7 @@
 		loop: true,
 		autoplay: {
 			enabled: true,
-			delay: 6000
+			delay: 9000
 		},
 		// Navigation arrows
 		navigation: {
@@ -441,7 +441,7 @@
 			el: ".swiper-pagination",
 			clickable: true,
 		},
-		speed: 500,
+		speed: 800,
 		breakpoints: {
 			'1600': {
 				slidesPerView: 1,
