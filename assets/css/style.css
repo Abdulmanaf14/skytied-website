@@ -7236,7 +7236,7 @@
 .contact-info{
 	position: relative;
 	padding: 100px 0px 70px;
-	background-color: var(--color-four);
+	background-color: var(--color-two);
 	border-bottom: 1px solid rgba(var(--white-color-rgb), 0.06);
 }
 
@@ -7295,11 +7295,17 @@
 }
 
 .info-block_one.active .info-block_one-inner{
-	background-color: var(--main-color);
+        background-color: var(--main-color);
 }
 
-.info-block_one.active .info-block_one-icon{
-	color: var(--main-color);
+.info-block_one.active .info-block_one-inner h4,
+.info-block_one.active .info-block_one-inner a,
+.info-block_one.active .info-block_one-inner .text,
+.info-block_one.active .info-block_one-inner strong{
+        color: var(--white-color) !important;
+}
+
+.info-block_one.active .info-block_one-icon{	color: var(--main-color);
 	background-color: var(--white-color);
 }
 
