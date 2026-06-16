@@ -1038,7 +1038,7 @@ img{
 
 .sec-title.style-four .sec-title_title{
 	padding: 0px 0px;
-	color: #D093E8;
+	color: var(--main-color);
 	text-transform: uppercase;
 }
 
