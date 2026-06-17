@@ -558,6 +558,12 @@
 		padding: 50px 30px;
 		text-align: center;
 		margin-top: 0px !important;
+		background-color: var(--main-color) !important;
+	}
+
+	.cta-one .inner-container h2,
+	.cta-one .inner-container p{
+		color: var(--white-color) !important;
 	}
 
 	.cta-one_image-outer{
