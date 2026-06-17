@@ -547,7 +547,7 @@
 	}
 
 	.cta-one .inner-container::before{
-		top: 0px;
+		display: none;
 	}
 
 	.cta-one_title-outer{
@@ -555,8 +555,9 @@
 	}
 
 	.cta-one .inner-container{
-		padding: 0px 30px;
+		padding: 50px 30px;
 		text-align: center;
+		margin-top: 0px !important;
 	}
 
 	.cta-one_image-outer{
