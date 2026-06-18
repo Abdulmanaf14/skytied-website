@@ -888,6 +888,7 @@
 	if(!$('.whatsapp-chat').length){
 		var whatsappNumber = '971522145960';
 		var defaultMessage = 'Hello Sky Tide Logistics, I need assistance.';
+		var messagePrefix = 'Message from Sky Tide Logistics website:';
 		var whatsappWidget = '' +
 			'<div class="whatsapp-chat" aria-live="polite">' +
 				'<div class="whatsapp-chat_box" aria-hidden="true">' +
@@ -901,8 +902,9 @@
 					'</div>' +
 					'<div class="whatsapp-chat_body">' +
 						'<p>Hello, welcome to Sky Tide Logistics. Send us a message and we will continue on WhatsApp.</p>' +
+						'<span class="whatsapp-chat_note">This message will be sent from the website chat.</span>' +
 						'<form class="whatsapp-chat_form">' +
-							'<textarea class="whatsapp-chat_message" rows="3" placeholder="Type your message..." aria-label="WhatsApp message"></textarea>' +
+							'<textarea class="whatsapp-chat_message" rows="3" placeholder="Type your message..." aria-label="WhatsApp message">' + defaultMessage + '</textarea>' +
 							'<button type="submit"><span>Send</span><i class="fa-brands fa-whatsapp"></i></button>' +
 						'</form>' +
 					'</div>' +
@@ -917,7 +919,8 @@
 
 		var openWhatsApp = function(message){
 			var text = $.trim(message) || defaultMessage;
-			window.location.href = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(text);
+			var websiteMessage = messagePrefix + '\n' + text;
+			window.open('https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(websiteMessage), '_blank', 'noopener');
 		};
 
 		$('.whatsapp-chat_toggle').on('click', function(){

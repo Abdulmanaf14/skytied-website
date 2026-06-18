@@ -821,7 +821,8 @@
 }
 
 .main-header .main-menu .navigation > li > ul > li > a:hover{
-	color: var(--main-color);
+	color: var(--color-two);
+	background-color: var(--main-color);
 }
 
 .main-header .main-menu .navigation > li > ul > li.dropdown > a:after{
@@ -976,7 +977,8 @@
 }
 
 .main-header .main-menu .navigation > li > ul > li > ul > li > a:hover{
-	color: var(--main-color);
+	color: var(--color-two);
+	background-color: var(--main-color);
 }
 
 .main-header .main-menu .navigation > li.dropdown:hover > ul{

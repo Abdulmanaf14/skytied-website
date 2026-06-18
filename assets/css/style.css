@@ -7918,6 +7918,14 @@
     line-height: 1.55;
 }
 
+.whatsapp-chat_note {
+    display: block;
+    margin: -4px 0 12px;
+    color: #5f6f69;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
 .whatsapp-chat_form {
     display: grid;
     gap: 10px;
