@@ -7807,13 +7807,15 @@
     line-height: 1.2;
     box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
     cursor: pointer;
-    transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+    opacity: 0.85;
+    transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease, opacity 200ms ease;
 }
 
 .whatsapp-chat_toggle:hover {
     transform: translateY(-2px);
     background: #1ebe5d;
     box-shadow: 0 18px 38px rgba(0, 0, 0, 0.26);
+    opacity: 1;
 }
 
 .whatsapp-chat_toggle i {
@@ -7979,16 +7981,16 @@
     }
 
     .whatsapp-chat_toggle {
-        min-height: 50px;
+        min-height: 44px;
         max-width: calc(100vw - 32px);
-        padding-left: 14px;
-        font-size: 14px;
+        padding: 6px 8px 6px 12px;
+        font-size: 13px;
     }
 
     .whatsapp-chat_toggle i {
-        width: 34px;
-        height: 34px;
-        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
     }
 
     .whatsapp-chat_box {
