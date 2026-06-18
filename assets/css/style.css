@@ -92,6 +92,7 @@
 	height: 100vh;
 	max-height: 100vh;
 	overflow: hidden;
+	background: linear-gradient(135deg, #f5f8e8 0%, #e1eefc 100%);
 }
 
 .slider-one,
