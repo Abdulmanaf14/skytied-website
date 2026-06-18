@@ -883,9 +883,70 @@
 			}
 		});
 	}
-	
-	
-	
+
+	// Floating WhatsApp chat
+	if(!$('.whatsapp-chat').length){
+		var whatsappNumber = '971522145960';
+		var defaultMessage = 'Hello Sky Tide Logistics, I need assistance.';
+		var whatsappWidget = '' +
+			'<div class="whatsapp-chat" aria-live="polite">' +
+				'<div class="whatsapp-chat_box" aria-hidden="true">' +
+					'<div class="whatsapp-chat_header">' +
+						'<span class="whatsapp-chat_icon"><i class="fa-brands fa-whatsapp"></i></span>' +
+						'<div>' +
+							'<strong>How can I help you?</strong>' +
+							'<small>We usually reply on WhatsApp.</small>' +
+						'</div>' +
+						'<button type="button" class="whatsapp-chat_close" aria-label="Close WhatsApp chat"><i class="fa-solid fa-xmark"></i></button>' +
+					'</div>' +
+					'<div class="whatsapp-chat_body">' +
+						'<p>Hello, welcome to Sky Tide Logistics. Send us a message and we will continue on WhatsApp.</p>' +
+						'<form class="whatsapp-chat_form">' +
+							'<textarea class="whatsapp-chat_message" rows="3" placeholder="Type your message..." aria-label="WhatsApp message"></textarea>' +
+							'<button type="submit"><span>Send</span><i class="fa-brands fa-whatsapp"></i></button>' +
+						'</form>' +
+					'</div>' +
+				'</div>' +
+				'<button type="button" class="whatsapp-chat_toggle" aria-expanded="false" aria-label="Open WhatsApp chat">' +
+					'<span>How can I help you?</span>' +
+					'<i class="fa-brands fa-whatsapp"></i>' +
+				'</button>' +
+			'</div>';
+
+		$('body').append(whatsappWidget);
+
+		var openWhatsApp = function(message){
+			var text = $.trim(message) || defaultMessage;
+			window.location.href = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(text);
+		};
+
+		$('.whatsapp-chat_toggle').on('click', function(){
+			var widget = $('.whatsapp-chat');
+			var isOpen = widget.toggleClass('is-open').hasClass('is-open');
+			$(this).attr('aria-expanded', isOpen);
+			$('.whatsapp-chat_box').attr('aria-hidden', !isOpen);
+
+			if(isOpen){
+				setTimeout(function(){
+					$('.whatsapp-chat_message').trigger('focus');
+				}, 120);
+			}
+		});
+
+		$('.whatsapp-chat_close').on('click', function(){
+			$('.whatsapp-chat').removeClass('is-open');
+			$('.whatsapp-chat_toggle').attr('aria-expanded', false).trigger('focus');
+			$('.whatsapp-chat_box').attr('aria-hidden', true);
+		});
+
+		$('.whatsapp-chat_form').on('submit', function(event){
+			event.preventDefault();
+			openWhatsApp($('.whatsapp-chat_message').val());
+		});
+	}
+
+
+
 	// Scroll to a Specific Div
 	if($('.scroll-to-target').length){
 		$(".scroll-to-target").on('click', function() {
