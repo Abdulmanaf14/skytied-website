@@ -422,10 +422,14 @@
 
 	
 	// Main Slider
-	var slider = new Swiper('.main-slider', {
+	var mainSlider = new Swiper('.main-slider', {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		loop: true,
+		autoHeight: true,
+		observer: true,
+		observeParents: true,
+		updateOnWindowResize: true,
 		autoplay: {
 			enabled: true,
 			delay: 9000
@@ -462,6 +466,10 @@
 				slidesPerView: 1,
 			},
 		},
+	});
+
+	$('.main-slider video').on('loadedmetadata loadeddata', function(){
+		mainSlider.update();
 	});
 
 
