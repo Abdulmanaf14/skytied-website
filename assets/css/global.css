@@ -926,7 +926,7 @@ img{
 }
 
 .sec-title.light .sec-title_title{
-    color: var(--main-color);
+    color: var(--color-two);
 }
 
 .sec-title.light .sec-title_heading span::before{

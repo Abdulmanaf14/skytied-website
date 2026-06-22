@@ -609,7 +609,7 @@
 
 .about-one{
 	position: relative;
-	padding: 100px 0px 70px;
+	 padding: 70px 0px 70px;
 }
 
 .about-one .sec-title_title{
@@ -758,6 +758,7 @@
 	border-radius: 6px;
 	padding: 40px 30px 38px;
 	background-color: rgba(var(--white-color-rgb), 0.10);
+	align-items: center;
 }
 
 .counter-block_one-inner:hover .counter-block_one-icon{
@@ -1760,7 +1761,7 @@
 
 .faq-one{
 	position: relative;
-	padding: 100px 0px 70px;
+	 padding: 70px 0px 70px;
 }
 
 .faq-one.style-two{
@@ -2086,7 +2087,7 @@
 }
 
 .news-one.style-two{
-	padding-bottom: 100px;
+	padding-bottom: 70px;
 }
 
 .news-one_shadow{
@@ -3272,7 +3273,7 @@
 
 .order-one{
 	position: relative;
-	padding: 100px 0px 70px;
+	 padding: 70px 0px 70px;
 }
 
 .order-one_skill-column{
@@ -3418,7 +3419,7 @@
 
 .testimonial-two{
 	position: relative;
-	padding-bottom: 100px;
+	padding-bottom: 70px;
 }
 
 .testimonial-two .auto-container{
@@ -3756,7 +3757,7 @@
 
 .price-two{
 	position: relative;
-	padding: 100px 0px 70px;
+	 padding: 70px 0px 70px;
 }
 
 .price-two.style-two .pricing-tabs .buttons-outer{
@@ -4774,7 +4775,7 @@
 
 .choose-two{
 	position: relative;
-	padding: 100px 0px 70px;
+	 padding: 70px 0px 70px;
 }
 
 .choose-block_one{
@@ -5121,7 +5122,7 @@
 
 .story-one{
 	position: relative;
-	padding: 100px 0px 70px;
+	 padding: 70px 0px 70px;
 }
 
 .story-one .sec-title_title{
@@ -5649,6 +5650,7 @@
 	padding: 35px 30px;
 	border-radius: 8px;
 	background-color: var(--color-nine);
+	text-align: center;
 }
 
 .service-block_four-icon{
@@ -5685,7 +5687,7 @@
 
 .solution-one{
 	position: relative;
-	padding: 100px 0px 60px;
+	padding: 0px 0px 60px;
 	border-top: 1px solid rgba(var(--white-color-rgb), 0.10);
 	border-bottom: 1px solid rgba(var(--white-color-rgb), 0.10);
 }
@@ -6859,7 +6861,7 @@
 
 .team-two{
 	position: relative;
-	padding: 100px 0px 70px;
+	 padding: 70px 0px 70px;
 	background-color: var(--color-four);
 }
 
@@ -6873,7 +6875,7 @@
 
 .team-detail{
 	position: relative;
-	padding: 100px 0px 70px;
+	 padding: 70px 0px 70px;
 	background-color: var(--color-four);
 }
 
@@ -7057,7 +7059,7 @@
 
 .team-detail_experiance{
 	position: relative;
-	padding-bottom: 100px;
+	padding-bottom: 70px;
 	background-color: var(--color-four);
 }
 
@@ -7169,7 +7171,7 @@
 
 .price-four{
 	position: relative;
-	padding: 100px 0px 70px;
+	 padding: 70px 0px 70px;
 	background-color: var(--color-four);
 }
 
@@ -7235,7 +7237,7 @@
 
 .contact-info{
 	position: relative;
-	padding: 100px 0px 70px;
+	 padding: 70px 0px 70px;
 	background-color: var(--color-two);
 	border-bottom: 1px solid rgba(var(--white-color-rgb), 0.06);
 }
@@ -7996,4 +7998,178 @@
     .whatsapp-chat_box {
         bottom: 64px;
     }
+}
+
+/*
+====================================================================
+	Section Spacing Cleanup
+====================================================================
+*/
+
+:root {
+	--section-space: 80px;
+	--section-space-sm: 56px;
+	--section-title-gap: 38px;
+}
+
+.page-wrapper > section,
+.page-wrapper > div.services-two {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.conversation-one,
+.services-one,
+.industries-one,
+.choose-one,
+.social-one,
+.story-one,
+.value-one,
+.services-detail,
+.services-two,
+.solution-one,
+.cta-one,
+.contact-info,
+.team-detail_form,
+.map-one {
+	padding-top: var(--section-space) !important;
+	padding-bottom: var(--section-space) !important;
+}
+
+.page-title {
+	padding-top: 120px !important;
+	padding-bottom: 120px !important;
+}
+
+.services-detail + .services-two,
+.services-two + .solution-one,
+.solution-one + .industries-one,
+.industries-one + .cta-one {
+	margin-top: 0 !important;
+}
+
+.sec-title {
+	margin-bottom: var(--section-title-gap) !important;
+}
+
+.services-detail .sec-title,
+.solution-one .sec-title {
+	margin-bottom: 36px !important;
+}
+
+.service-block_one,
+.service-block_four,
+.news-block_one,
+.value-block_one,
+.info-block_one,
+.counter-block_one,
+.story-one_image-column,
+.story-one_content-column {
+	margin-bottom: 30px !important;
+}
+
+.service-block_one:nth-last-child(-n + 3),
+.service-block_four:nth-last-child(-n + 4),
+.news-block_one:nth-last-child(-n + 3),
+.value-block_one:nth-last-child(-n + 3),
+.info-block_one:nth-last-child(-n + 3),
+.counter-block_one:nth-last-child(-n + 3) {
+	margin-bottom: 0 !important;
+}
+
+.cta-one .inner-container {
+	margin-top: 0 !important;
+	padding: 56px 40px !important;
+}
+
+.cta-one h2 {
+	margin-bottom: 16px !important;
+}
+
+.cta-one p {
+	margin-bottom: 28px !important;
+}
+
+.map-one_map iframe,
+.map-one iframe {
+	display: block;
+}
+
+.main-footer .widgets-section {
+	margin-top: 0 !important;
+	padding-top: 72px !important;
+	padding-bottom: 42px !important;
+}
+
+@media (max-width: 991px) {
+	:root {
+		--section-space: 64px;
+		--section-title-gap: 30px;
+	}
+
+	.page-title {
+		padding-top: 96px !important;
+		padding-bottom: 96px !important;
+	}
+
+	.service-block_one:nth-last-child(-n + 3),
+	.service-block_four:nth-last-child(-n + 4),
+	.news-block_one:nth-last-child(-n + 3),
+	.value-block_one:nth-last-child(-n + 3),
+	.info-block_one:nth-last-child(-n + 3),
+	.counter-block_one:nth-last-child(-n + 3) {
+		margin-bottom: 30px !important;
+	}
+
+	.service-block_one:nth-last-child(-n + 2),
+	.service-block_four:nth-last-child(-n + 2),
+	.news-block_one:nth-last-child(-n + 2),
+	.value-block_one:nth-last-child(-n + 2),
+	.info-block_one:nth-last-child(-n + 2),
+	.counter-block_one:nth-last-child(-n + 2) {
+		margin-bottom: 0 !important;
+	}
+}
+
+@media (max-width: 767px) {
+	:root {
+		--section-space: var(--section-space-sm);
+		--section-title-gap: 26px;
+	}
+
+	.page-title {
+		padding-top: 76px !important;
+		padding-bottom: 76px !important;
+	}
+
+	.service-block_one,
+	.service-block_four,
+	.news-block_one,
+	.value-block_one,
+	.info-block_one,
+	.counter-block_one,
+	.story-one_image-column,
+	.story-one_content-column {
+		margin-bottom: 24px !important;
+	}
+
+	.service-block_one:last-child,
+	.service-block_four:last-child,
+	.news-block_one:last-child,
+	.value-block_one:last-child,
+	.info-block_one:last-child,
+	.counter-block_one:last-child,
+	.story-one_image-column:last-child,
+	.story-one_content-column:last-child {
+		margin-bottom: 0 !important;
+	}
+
+	.cta-one .inner-container {
+		padding: 40px 22px !important;
+	}
+
+	.main-footer .widgets-section {
+		padding-top: 56px !important;
+		padding-bottom: 28px !important;
+	}
 }
