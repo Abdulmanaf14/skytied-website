@@ -824,6 +824,7 @@
 	.footer-copyright{
 		order: 3;
 		margin-top: 15px;
+		font-size: 12px;
 	}
 
 	.footer-social_box{
@@ -884,6 +885,10 @@
 
 	.main-header .mobile-nav-toggler{
 		margin-left: 12px;
+	}
+
+	.footer-lists_outer .column{
+		margin-bottom: 20px;
 	}
 
 }
