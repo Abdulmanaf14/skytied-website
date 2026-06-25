@@ -1306,3 +1306,10 @@
 		display: none;
 	}
 }
+@media only screen and (max-width: 767px) {
+    .social-box_one .social_icon-box img {
+        max-width: 70px; /* Adjust as needed */
+        max-height: 70px; /* Adjust as needed */
+        object-fit: contain;
+    }
+}
