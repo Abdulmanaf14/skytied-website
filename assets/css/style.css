@@ -728,17 +728,22 @@
 .choose-one .inner-container{
 	position: relative;
 	border-radius: 10px;
-	padding: 80px 160px 50px;
+	padding: 60px 80px 30px;
 	background-color: var(--main-color);
+}
+
+.choose-one .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Adjust this value as needed */
 }
 
 .counter-block_one{
 	display: flex;
-	flex-direction: column;
+    flex-direction: column;
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 0px; /* Remove individual margin-bottom as gap handles it */
 }
-
 .counter-block_one-inner{
 	flex-grow: 1;
 	display: flex;
