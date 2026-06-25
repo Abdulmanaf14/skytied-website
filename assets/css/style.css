@@ -7247,7 +7247,7 @@
 
 .info-block_one{
 	position: relative;
-	margin-bottom: 30px;
+	/* margin-bottom: 30px; */
 }
 
 .info-block_one-inner{
@@ -8060,7 +8060,7 @@
 	margin-bottom: 36px !important;
 }
 
-.service-block_one,
+/* .service-block_one,
 .service-block_four,
 .news-block_one,
 .value-block_one,
@@ -8069,7 +8069,7 @@
 .story-one_image-column,
 .story-one_content-column {
 	margin-bottom: 30px !important;
-}
+} */
 
 .service-block_one:nth-last-child(-n + 3),
 .service-block_four:nth-last-child(-n + 4),
