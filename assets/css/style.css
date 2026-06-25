@@ -753,6 +753,8 @@
 	padding: 40px 30px 38px;
 	background-color: rgba(var(--white-color-rgb), 0.10);
 	align-items: center;
+	min-height: 280px;
+	text-align: center;
 }
 
 .counter-block_one-inner:hover .counter-block_one-icon{
@@ -783,6 +785,13 @@
 	font-size: 17px;
 	line-height: 27px;
 	color: var(--color-three);
+}
+
+@media (min-width: 992px) {
+    .choose-one .col-lg-4 {
+        flex: 1 0 30%;
+        max-width: 31%;
+    }
 }
 
 /***
