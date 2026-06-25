@@ -505,7 +505,7 @@ img{
     text-align: center;
     line-height: 35px;
     font-size: 15px;
-    color: var(--main-color);
+    color: var(--black-color);
     left: 0;
     top: 0;
     height: 35px;
@@ -520,7 +520,7 @@ img{
   .progress-wrap svg path {
     fill: none; }
   .progress-wrap svg.progress-circle path {
-    stroke: var(--main-color);
+    stroke: var(--black-color);
     stroke-width: 4;
     box-sizing: border-box;
     -webkit-transition: all 200ms linear;
