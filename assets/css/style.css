@@ -8492,3 +8492,99 @@ a.news-block_one-title:hover {
     text-transform: none !important;
     color: var(--primary-color);
 }
+
+.slider-one .template-btn.btn-style-one {
+    background-color: var(--primary-color);
+}
+.slider-one .template-btn.btn-style-one:before {
+    background-color: var(--secondary-color);
+}
+
+
+/* Value Section on About Page */
+.value-one {
+    background-color: #f9f9f9;
+    padding: 100px 0;
+}
+.value-block {
+    margin-bottom: 30px;
+}
+.value-block_inner {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+.value-block_inner:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    border-color: var(--secondary-color);
+}
+.value-block_icon {
+    font-size: 40px;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    display: inline-block;
+    line-height: 1;
+}
+.value-block_heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.value-block_text {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* CTA Section on Service Pages */
+.cta-one {
+    position: relative;
+    padding: 80px 0;
+}
+
+.cta-one .inner-container {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 60px 40px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.cta-one h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--white-color);
+}
+
+.cta-one p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: var(--white-color);
+    opacity: 0.9;
+}
+
+.cta-one .btn-style-three {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+.cta-one .btn-style-three:hover {
+    background-color: var(--white-color);
+    color: var(--secondary-color);
+}
+.cta-one .btn-style-three:before {
+    background-color: var(--primary-color);
+}
+.cta-one .btn-style-three:hover .btn-wrap .text-two {
+    color: var(--white-color);
+}
+
+/* Fixing choose-one section background */
+/* .choose-one .inner-container {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+} */
