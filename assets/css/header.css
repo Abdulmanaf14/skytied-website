@@ -276,8 +276,8 @@
 }
 
 .header-style-two .btn-style-two{
-	border-color: rgba(var(--main-color-rgb), 0.10);
-	background-color: rgba(var(--main-color-rgb), 0.16);
+	border-color: rgba(var(--primary-color-rgb), 0.10);
+	background-color: rgba(var(--primary-color-rgb), 0.16);
 }
 
 .main-header.header-style-two .header-lower .logo-box{
@@ -1305,4 +1305,89 @@
 
 .main-header .outer-box{
 	position: relative;
+}
+/* Header Customizations */
+
+/* Header Top Background */
+.header-top {
+    background: #004467;
+}
+
+/* Main navigation link color on hover and for current page */
+.main-header .main-menu .navigation > li:hover > a,
+.main-header .main-menu .navigation > li.current > a {
+	color: #F69300;
+}
+
+/* Main navigation dropdown arrow on hover */
+.main-header .main-menu .navigation > li:hover > a::before {
+    color: #F69300;
+}
+
+/* Dropdown menu background */
+.main-header .main-menu .navigation > li > ul > li > a {
+    background-color: #004467;
+    color: #ffffff;
+}
+
+/* Dropdown menu item hover state */
+.main-header .main-menu .navigation > li > ul > li > a:hover {
+    background-color: #003350; /* Darker shade of primary */
+    color: #F69300;
+}
+
+/* Sub-menu dropdown arrow color */
+.main-header .main-menu .navigation > li > ul > li.dropdown > a:after {
+    color: #ffffff;
+}
+
+/* CTA Button in header */
+.header-style-two .btn-style-one {
+    background-color: #F69300;
+    color: #ffffff;
+}
+.header-style-two .btn-style-one:before {
+    background-color: #ffffff;
+}
+.header-style-two .btn-style-one .btn-wrap .text-two {
+    color: #F69300;
+}
+
+/* Sticky header background */
+.main-header.fixed-header .header-lower {
+    background-color: #ffffff;
+}
+
+/* Mobile navigation toggler */
+.main-header .mobile-nav-toggler {
+    color: #004467;
+}
+
+/* Mobile menu text colors */
+.main-header .mobile-menu .navigation li > a {
+    color: #004467;
+}
+
+/* Mobile menu current item and hover */
+.main-header .mobile-menu .navigation li:hover > a,
+.main-header .mobile-menu .navigation li.current > a {
+    color: #F69300;
+}
+
+/* Mobile menu borders */
+.main-header .mobile-menu .navigation li,
+.main-header .mobile-menu .navigation li > ul > li:first-child {
+    border-color: rgba(0, 68, 103, 0.2);
+}
+
+.main-header .main-menu .navigation > li > a .menu-text {
+    text-shadow: 0 17px 0 #F69300;
+}
+
+.main-header .main-menu .navigation > li:hover > a, .main-header .main-menu .navigation > li.current > a {
+    color: #F69300;
+}
+
+.main-header .main-menu .navigation > li > a:hover {
+    color: #F69300;
 }
