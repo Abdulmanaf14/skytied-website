@@ -735,7 +735,7 @@
 .choose-one .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px; /* Adjust this value as needed */
+    gap: 20px; /* Adjust this value as needed */
 }
 
 .counter-block_one{
@@ -7300,7 +7300,7 @@
 }
 
 .info-block_one.active .info-block_one-inner{
-        background-color: var(--main-color);
+        background-color: var(--secondary-color);
 }
 
 .info-block_one.active .info-block_one-inner h4,
@@ -8391,7 +8391,7 @@ a:hover {
 }
 
 .trust-block_one {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 .trust-block_one-inner {
     background-color: #ffffff;
@@ -8443,7 +8443,7 @@ a:hover {
     transition: all 0.3s ease;
     background: #fff;
     border: 1px solid #eee;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 .news-block_one-inner:hover {
     transform: translateY(-10px);
@@ -8588,3 +8588,46 @@ a.news-block_one-title:hover {
 /* .choose-one .inner-container {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 } */
+
+/* Service Block Four Redesign */
+.services-two {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+}
+.service-block_four-inner {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+.service-block_four-inner:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    border-color: var(--secondary-color);
+}
+.service-block_four-icon {
+    font-size: 40px;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    display: inline-block;
+    line-height: 1;
+}
+.service-block_four-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.service-block_four-text {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Ensure consistent bottom margin for service blocks */
+.services-two .service-block_four {
+    margin-bottom: 30px !important; /* Force bottom margin */
+}
