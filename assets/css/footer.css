@@ -12,6 +12,7 @@
 	position:relative;
 	/* margin-top: -100px; */
 	background: url('../images/background/bg-footer.png') no-repeat center center/cover;
+	background-color: #004467;
 }
 
 .main-footer .footer_pattern{
@@ -293,3 +294,76 @@
 	position: relative;
 	gap: 20px;
 }
+
+.main-footer .footer-bottom {
+	border-top: 1px solid #F69300;
+}
+
+.footer-contact_list li .icon,
+.footer-social_box a {
+	color: #F69300;
+}
+
+.footer-title {
+	position: relative;
+	padding-bottom: 10px;
+}
+
+.footer-title::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 30px;
+	height: 2px;
+	background-color: #F69300;
+}
+
+.footer-social_box a {
+	border: 1px solid #F69300;
+}
+
+.footer-social_box a:hover {
+	background-color: #F69300;
+	border-color: #F69300;
+	color: #fff;
+}
+
+.footer-copyright a,
+.footer-pages_list li a:hover,
+.footer-contact_list li a:hover {
+	color: #F69300;
+}
+
+.footer-pages_list li a:hover {
+	text-decoration: none;
+}
+
+/* For active page link in footer */
+.footer-pages_list li.active a {
+	color: #F69300;
+	font-weight: bold;
+}
+
+/* Service list icons */
+.footer-pages_list li i {
+	margin-right: 8px;
+	color: #F69300;
+}
+
+/* Change company name color */
+.footer-copyright a[href="https://skytidelogistics.com/"] {
+    color: #F69300;
+}
+
+.main-footer .footer-upper-box {
+    border-bottom: 1px solid #F69300;
+}
+.footer-copyright {
+    color: var(--white-color);
+}
+.footer-copyright a {
+    color: #F69300;
+}
+
+/* End of Custom Footer Styles */
