@@ -5722,6 +5722,8 @@
 	font-size: 17px;
 	margin-bottom: 12px;
 	color: var(--color-six);
+	display: flex;
+	align-items: flex-start;
 }
 
 .solution-one_list li i{
@@ -5734,8 +5736,8 @@
 	text-align: center;
 	margin-right: 15px;
 	display: inline-block;
-	color: var(--white-color);
-	background-color: var(--main-color);
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
 }
 
 .service-detail_image-two{

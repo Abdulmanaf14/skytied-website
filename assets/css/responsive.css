@@ -1219,7 +1219,7 @@
 	}
 
 	.solution-one_list li{
-		font-size: 15px;
+		font-size: 13px;
 	}
 
 	.news-block_three-text,
@@ -1320,5 +1320,25 @@
         max-width: 70px; /* Adjust as needed */
         max-height: 70px; /* Adjust as needed */
         object-fit: contain;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .service-block_four-title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .service-block_four-text {
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .service-block_four-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
