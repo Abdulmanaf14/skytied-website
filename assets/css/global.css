@@ -991,8 +991,8 @@ img{
 }
 
 .sec-title.style-two.light .sec-title_title{
-	color: var(--primary-color);
-	background-color: rgba(var(--primary-color-rgb), 0.08);
+	color: var(--color-two);
+	background-color: rgba(var(--secondary-color-rgb), 0.08);
 }
 
 .sec-title.style-two.light .sec-title_heading span{

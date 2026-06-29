@@ -3262,6 +3262,17 @@
 	display: inline-block;
 }
 
+.clients-box img {
+    /* max-width: 120px;
+    max-height: 120px; */
+    width: auto; /* Allow image to scale down */
+    height: auto; /* Allow image to scale down */
+    object-fit: contain; /* Ensure the entire image is visible within the bounds */
+    display: block; /* Remove extra space below image */
+}
+
+
+
 .clients-box{
 	position: relative;
 	border-radius: 8px;
@@ -8344,7 +8355,7 @@ a:hover {
     background-color: var(--secondary-color) !important;
 }
 .sec-title_heading {
-    color: var(--primary-color) !important;
+    /* color: var(--primary-color) !important; */
 }
 .sec-title_heading span {
     color: var(--secondary-color) !important;
