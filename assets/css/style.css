@@ -3210,6 +3210,7 @@
 .clients-one .auto-container{
 	position: relative;
 	max-width: 1650px;
+	background-color: var(--primary-color);
 }
 
 .clients-one .inner-container{
@@ -3217,7 +3218,7 @@
 	overflow: hidden;
 	border-radius: 10px;
 	padding: 100px 160px 100px;
-	background-color: var(--main-color);
+	/* background-color: var(--primary-color); */
 }
 
 .clients-one .inner-container .sec-title_heading span{
