@@ -370,7 +370,7 @@
 	.main-header{
 		position:relative;
 		background-color: var(--color-two);
-		min-height: 80px;
+		min-height: 60px;
 	}
 
 	.main-header .mobile-nav-toggler{

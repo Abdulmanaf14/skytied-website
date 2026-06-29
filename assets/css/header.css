@@ -261,6 +261,7 @@
 .main-header .header-lower .logo-box .logo img{
 	max-height: 50px;
 	width: auto;
+	margin-top: 10px;
 }
 
 .main-header .main-menu .navigation > li:nth-child(7) > ul,
