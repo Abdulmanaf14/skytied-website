@@ -1036,9 +1036,12 @@
 		padding-right: 0px;
 	}
 
+    .clients-box img {
+        max-width: 80px;
+        max-height: 80px;
+    }
 }
 
-@media only screen and (max-width: 479px) {
 
 	.sec-title_heading br,
 	.cta-icon_one,

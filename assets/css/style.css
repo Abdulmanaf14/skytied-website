@@ -3262,6 +3262,38 @@
 	display: inline-block;
 }
 
+/* Clients marquee — pure CSS seamless loop.
+   The .clients-track holds the logos twice (two identical sets);
+   translating by -50% moves exactly one set width, giving a gap-free loop. */
+.clients-one .clients-track{
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	width: max-content;
+	will-change: transform;
+	animation: clientsMarquee 35s linear infinite;
+}
+.clients-one .clients-track:hover{
+	animation-play-state: paused;
+}
+.clients-one .clients-track .clients-box{
+	flex: 0 0 auto;
+}
+@keyframes clientsMarquee{
+	0%{ transform: translateX(0); }
+	100%{ transform: translateX(-50%); }
+}
+@media (max-width: 768px){
+	.clients-one .clients-track{
+		animation-duration: 25s;
+	}
+}
+@media (prefers-reduced-motion: reduce){
+	.clients-one .clients-track{
+		animation: none;
+	}
+}
+
 .clients-box img {
     /* max-width: 120px;
     max-height: 120px; */
