@@ -3272,6 +3272,7 @@
 	width: max-content;
 	will-change: transform;
 	animation: clientsMarquee 35s linear infinite;
+	gap: 20px;
 }
 .clients-one .clients-track:hover{
 	animation-play-state: paused;
