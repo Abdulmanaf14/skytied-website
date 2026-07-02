@@ -1,1 +1,1 @@
-# skytied-website
+# SkyTide-website
