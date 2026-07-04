@@ -101,7 +101,7 @@ html.sky-preloading body { background-color: #071524; }
 }
 
 /* logo + dual glow */
-.sky-loader .logo-stage{ position: relative; display: grid; place-items: center; margin-bottom: 30px; }
+.sky-loader .logo-stage{ position: relative; display: grid; place-items: center; margin-bottom: 15px; }
 .sky-loader .logo-glow{
   position: absolute;
   width: 300px; height: 300px;
@@ -122,7 +122,7 @@ html.sky-preloading body { background-color: #071524; }
   50%{ transform: scale(1.06); opacity: 1; }
 }
 .sky-loader .logo-wrap{ position: relative; z-index: 2; filter: drop-shadow(0 10px 30px rgba(0,0,0,.45)); }
-.sky-loader .logo{ width: clamp(150px,20vw,210px); height: auto; display: block; animation: sky-float 7s ease-in-out infinite; }
+.sky-loader .logo{ width: clamp(300px,30vw,410px); height: auto; display: block; animation: sky-float 7s ease-in-out infinite; }
 @keyframes sky-float{ 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-5px); } }
 
 /* wordmark + tagline */
