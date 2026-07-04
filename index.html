@@ -31,6 +31,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+	<!-- Skytide preloader (anti-flash hook) -->
+	<link href="assets/css/preloader-skytide.css" rel="stylesheet">
+	<script>!function(){var d=document.documentElement;d.className+=" sky-preloading";setTimeout(function(){d.className=d.className.replace(/\s?sky-preloading/g,"")},1e4)}();</script>
+
 <link rel="shortcut icon" href="assets/images/FAV ICON.jpg" type="image/x-icon">
 <link rel="icon" href="assets/images/FAV ICON.jpg" type="image/x-icon">
 
@@ -49,26 +53,9 @@
 	<div class="cursor-follower"></div>
 	<!-- Cursor End -->
 
-	<!-- Preloader -->
-	<div class="loader-wrap">
-		<div class="preloader">
-			<div class="preloader-close">x</div>
-			<div id="handle-preloader" class="handle-preloader">
-				<div class="animation-preloader">
-					<div class="txt-loading">
-					<span data-text-preloader="S" class="letters-loading">S</span>
-					<span data-text-preloader="K" class="letters-loading">K</span>
-					<span data-text-preloader="Y" class="letters-loading">Y</span>
-					<span data-text-preloader="T" class="letters-loading">T</span>
-					<span data-text-preloader="I" class="letters-loading">I</span>
-					<span data-text-preloader="D" class="letters-loading">D</span>
-					<span data-text-preloader="E" class="letters-loading">E</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Preloader End -->
+	<!-- Skytide Preloader (mounts instantly, dismisses on window load) -->
+		<script src="assets/js/preloader-skytide.js"></script>
+	<!-- Skytide Preloader End -->
 
 	<!-- Main Header -->
 			<!-- Main Header -->

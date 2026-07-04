@@ -1,0 +1,259 @@
+/* =====================================================================
+   SKYTIDE LOGISTICS — Premium Preloader  (scoped; safe for the live site)
+   Palette: navy #071524 (bg) · blue #004467 · orange #F5A000 / #F69300
+   All rules are scoped under .sky-loader so they never touch the site.
+   ===================================================================== */
+
+/* Prevent a white flash before the splash mounts. The inline head script
+   adds .sky-preloading to <html>; preloader-skytide.js removes it on dismiss. */
+html.sky-preloading,
+html.sky-preloading body { background-color: #071524; }
+
+.sky-loader *,
+.sky-loader *::before,
+.sky-loader *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+.sky-loader{
+  position: fixed;
+  inset: 0;
+  z-index: 9999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #fff;
+  background:
+    radial-gradient(120% 90% at 50% 8%,  #123049 0%, #0c2236 26%, #071524 55%, #04101c 100%),
+    #071524;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity .55s ease;
+}
+.sky-loader.is-leaving{ opacity: 0; }
+
+.sky-loader .layer{ position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.sky-loader .map-canvas{ z-index: 1; opacity: .9; }
+.sky-loader .silhouettes{ z-index: 2; }
+.sky-loader .fx-canvas{ z-index: 3; }
+.sky-loader .rays{ z-index: 4; }
+.sky-loader .streaks{ z-index: 5; }
+.sky-loader .vignette{ z-index: 6; }
+
+/* soft rotating light rays */
+.sky-loader .rays{
+  background: conic-gradient(from 0deg at 50% 42%,
+     transparent 0deg, rgba(46,134,193,.10) 12deg, transparent 26deg,
+     transparent 58deg, rgba(245,160,0,.06) 70deg, transparent 88deg,
+     transparent 148deg, rgba(46,134,193,.08) 166deg, transparent 188deg,
+     transparent 248deg, rgba(46,134,193,.07) 266deg, transparent 288deg);
+  filter: blur(42px);
+  opacity: .85;
+  animation: sky-spin 90s linear infinite;
+}
+@keyframes sky-spin{ to{ transform: rotate(360deg); } }
+
+/* diagonal light streaks */
+.sky-loader .streak{
+  position: absolute; top: 0; left: -20%; width: 140%; height: 1.5px;
+  background: linear-gradient(90deg, transparent 0%, rgba(140,190,255,.55) 50%, transparent 100%);
+  filter: blur(.6px);
+  transform: rotate(-16deg);
+  opacity: 0;
+}
+.sky-loader .streak.s1{ animation: sky-streak 11s linear infinite; }
+.sky-loader .streak.s2{ animation: sky-streak 13s linear infinite 3.2s; opacity: .6; }
+.sky-loader .streak.s3{ animation: sky-streak 17s linear infinite 6.5s; }
+@keyframes sky-streak{
+  0%{ transform: translateY(-24vh) rotate(-16deg); opacity: 0; }
+  8%{ opacity: .55; }
+  55%{ opacity: .22; }
+  100%{ transform: translateY(124vh) rotate(-16deg); opacity: 0; }
+}
+
+/* vignette + sheen */
+.sky-loader .vignette{
+  background:
+    radial-gradient(110% 80% at 50% 38%, transparent 40%, rgba(4,16,28,.55) 100%),
+    linear-gradient(180deg, rgba(18,48,73,.20) 0%, transparent 22%, transparent 78%, rgba(4,16,28,.55) 100%);
+}
+
+/* faint vehicle silhouettes */
+.sky-loader .silhouettes svg{
+  position: absolute; opacity: .06; color: #9cc4ee;
+  filter: drop-shadow(0 0 18px rgba(60,120,190,.4));
+}
+.sky-loader .silo-ship      { left: 50%; bottom: 5%;   width: min(520px,46vw); transform: translateX(-50%); }
+.sky-loader .silo-plane     { right: 7%;  top: 11%;   width: min(300px,26vw); transform: rotate(-6deg); }
+.sky-loader .silo-truck     { left: 6%;   bottom: 16%; width: min(230px,20vw); }
+.sky-loader .silo-warehouse { left: 4%;   bottom: 4%;  width: min(210px,18vw); }
+.sky-loader .silo-cranes    { right: 5%;  bottom: 4%;  width: min(300px,26vw); }
+
+/* ---------- content ---------- */
+.sky-loader .content{
+  position: relative;
+  z-index: 10;
+  width: min(640px,90vw);
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* logo + dual glow */
+.sky-loader .logo-stage{ position: relative; display: grid; place-items: center; margin-bottom: 30px; }
+.sky-loader .logo-glow{
+  position: absolute;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side, rgba(46,134,193,.55), rgba(46,134,193,.12) 55%, transparent 72%),
+    radial-gradient(closest-side at 62% 60%, rgba(245,147,0,.42), transparent 60%);
+  filter: blur(14px);
+  animation: sky-glow 5.5s ease-in-out infinite;
+}
+.sky-loader .logo-glow::after{
+  content: ""; position: absolute; inset: -30px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(46,134,193,.18), transparent 70%);
+  filter: blur(28px);
+}
+@keyframes sky-glow{
+  0%,100%{ transform: scale(.96); opacity: .85; }
+  50%{ transform: scale(1.06); opacity: 1; }
+}
+.sky-loader .logo-wrap{ position: relative; z-index: 2; filter: drop-shadow(0 10px 30px rgba(0,0,0,.45)); }
+.sky-loader .logo{ width: clamp(150px,20vw,210px); height: auto; display: block; animation: sky-float 7s ease-in-out infinite; }
+@keyframes sky-float{ 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-5px); } }
+
+/* wordmark + tagline */
+.sky-loader .brand{
+  font-weight: 800;
+  font-size: clamp(24px,4.4vw,44px);
+  letter-spacing: clamp(4px,.9vw,11px);
+  line-height: 1.1;
+  text-indent: clamp(4px,.9vw,11px);
+  background: linear-gradient(180deg,#ffffff 0%,#cfe2f6 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(70,150,220,.25);
+  margin-bottom: 14px;
+}
+.sky-loader .divider{
+  width: clamp(120px,22vw,200px); height: 1px; margin: 2px auto 14px;
+  background: linear-gradient(90deg, transparent, rgba(140,190,255,.55), transparent);
+}
+.sky-loader .tagline{
+  font-weight: 400;
+  font-size: clamp(12px,1.5vw,15px);
+  letter-spacing: 3px;
+  color: rgba(226,238,252,.62);
+  margin-bottom: 34px;
+}
+.sky-loader .tagline b{ color: #ffc24d; font-weight: 500; }
+
+/* service icons */
+.sky-loader .icons{ display: flex; gap: clamp(14px,3vw,30px); margin-bottom: 46px; list-style: none; }
+.sky-loader .icons li{ display: flex; flex-direction: column; align-items: center; gap: 9px; }
+.sky-loader .icon-tile{
+  width: clamp(54px,7vw,66px); height: clamp(54px,7vw,66px);
+  display: grid; place-items: center;
+  border-radius: 16px;
+  color: #dceaff;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 8px 26px rgba(0,0,0,.35);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+.sky-loader .icon-tile svg{ width: clamp(24px,3vw,30px); height: clamp(24px,3vw,30px); }
+.sky-loader .icons li:nth-child(1) .icon-tile{ animation: sky-tile 4s ease-in-out infinite 0.0s; }
+.sky-loader .icons li:nth-child(2) .icon-tile{ animation: sky-tile 4s ease-in-out infinite .8s; }
+.sky-loader .icons li:nth-child(3) .icon-tile{ animation: sky-tile 4s ease-in-out infinite 1.6s; }
+.sky-loader .icons li:nth-child(4) .icon-tile{ animation: sky-tile 4s ease-in-out infinite 2.4s; }
+@keyframes sky-tile{
+  0%,100%{ box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 8px 26px rgba(0,0,0,.35); border-color: rgba(255,255,255,.12); }
+  50%{ box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 0 26px rgba(46,134,193,.45); border-color: rgba(140,190,255,.5); }
+}
+.sky-loader .icon-label{ font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(226,238,252,.40); font-weight: 500; }
+
+/* ---------- progress block ---------- */
+.sky-loader .loader-block{ width: min(540px,84vw); display: flex; flex-direction: column; transition: opacity .5s ease; }
+.sky-loader .loader-block.cycle-out{ opacity: 0; }
+.sky-loader .prepare-row{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.sky-loader .prepare{ font-size: 11px; letter-spacing: 3.5px; text-transform: uppercase; color: rgba(226,238,252,.62); font-weight: 500; }
+.sky-loader .pct{ font-size: 12px; letter-spacing: 1px; color: #ffc24d; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.sky-loader .bar{
+  position: relative; height: 6px; width: 100%; border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255,255,255,.05), rgba(255,255,255,.09));
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: inset 0 1px 4px rgba(0,0,0,.5);
+  overflow: visible;
+}
+.sky-loader .bar-fill{
+  position: absolute; top: 0; left: 0; height: 100%; width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(245,160,0,.5) 0%, #F5A000 45%, #ffc24d 100%);
+  box-shadow: 0 0 12px rgba(245,160,0,.7), 0 0 24px rgba(245,160,0,.4);
+}
+.sky-loader .bar-dot{
+  position: absolute; top: 50%; left: 0%;
+  width: 11px; height: 11px; border-radius: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  box-shadow: 0 0 10px 2px rgba(255,210,140,1), 0 0 22px 6px rgba(245,160,0,.7);
+}
+.sky-loader .bar-dot::before{
+  content: ""; position: absolute; top: 50%; right: 6px; transform: translateY(-50%);
+  width: 46px; height: 4px; border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(255,194,77,.7));
+  filter: blur(1px);
+}
+.sky-loader .loading-row{ margin-top: 13px; text-align: center; }
+.sky-loader .loading{ font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(226,238,252,.40); font-weight: 500; }
+.sky-loader .loading .dots::after{ content: "..."; animation: sky-dots 1.4s steps(4,end) infinite; }
+@keyframes sky-dots{ 0%{content:""} 25%{content:"."} 50%{content:".."} 75%{content:"..."} 100%{content:"..."} }
+
+/* corner micro-labels */
+.sky-loader .corner{
+  position: absolute; z-index: 11;
+  font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: rgba(226,238,252,.32); font-weight: 500;
+  display: flex; align-items: center; gap: 8px;
+}
+.sky-loader .corner.tl{ top: 26px; left: 30px; }
+.sky-loader .corner.br{ bottom: 24px; right: 30px; }
+.sky-loader .live-dot{ width: 7px; height: 7px; border-radius: 50%; background: #37d39a; box-shadow: 0 0 10px #37d39a; animation: sky-live 2s ease-in-out infinite; }
+@keyframes sky-live{ 0%,100%{ opacity:.5; transform:scale(.85); } 50%{ opacity:1; transform:scale(1.15); } }
+
+/* entrance choreography */
+.sky-loader .content > *{ opacity: 0; transform: translateY(16px); animation: sky-rise .95s cubic-bezier(.2,.7,.2,1) forwards; }
+.sky-loader .logo-stage{ animation-delay: .10s; }
+.sky-loader .brand{ animation-delay: .32s; }
+.sky-loader .divider{ animation-delay: .42s; }
+.sky-loader .tagline{ animation-delay: .50s; }
+.sky-loader .icons{ animation-delay: .66s; }
+.sky-loader .loader-block{ animation-delay: .82s; }
+.sky-loader .corner{ opacity: 0; animation: sky-fade 1.2s ease forwards; animation-delay: 1s; }
+@keyframes sky-rise{ to{ opacity: 1; transform: none; } }
+@keyframes sky-fade{ to{ opacity: 1; } }
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .sky-loader .rays,
+  .sky-loader .streak,
+  .sky-loader .logo,
+  .sky-loader .logo-glow,
+  .sky-loader .icon-tile,
+  .sky-loader .live-dot{ animation: none !important; }
+  .sky-loader .content > *{ opacity: 1; transform: none; animation: none; }
+  .sky-loader .corner{ opacity: 1; animation: none; }
+}
+
+/* responsive */
+@media (max-width: 560px){
+  .sky-loader .logo-glow{ width: 230px; height: 230px; }
+  .sky-loader .icons{ gap: 12px; }
+  .sky-loader .corner.tl,
+  .sky-loader .corner.br{ display: none; }
+  .sky-loader .silo-warehouse,
+  .sky-loader .silo-cranes{ display: none; }
+}
