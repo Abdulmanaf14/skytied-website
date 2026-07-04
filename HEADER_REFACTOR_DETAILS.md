@@ -90,7 +90,7 @@ The website header has been successfully refactored with a cleaner, more focused
 - **Padding:** 30px (top/bottom)
 
 #### Mobile Logo
-- **File:** `assets/images/mobile-logo.svg`
+- **File:** `assets/images/001 PNG.png`
 - **Size:** Responsive SVG
 - **Usage:** Mobile menu header
 - **Alt Text:** "InfyStrat Logo"
