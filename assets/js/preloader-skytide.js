@@ -25,7 +25,7 @@
     firstVisit = !sessionStorage.getItem("skySplashSeen");
     sessionStorage.setItem("skySplashSeen", "1");
   } catch (e) {}
-  var MIN_SHOW = firstVisit ? 2600 : 1200;   /* minimum branding time (ms) */
+  var MIN_SHOW = firstVisit ? 2000 : 4000;   /* minimum branding time (ms) */
   var HARD_MAX = 9000;                        /* never let it hang longer than this */
 
   /* ------------------------------------------------------------------
@@ -109,6 +109,13 @@
   root.setAttribute("aria-hidden", "true");
   root.innerHTML = SPLASH_HTML;
   document.body.appendChild(root);
+
+  /* The anti-flash navy background is only needed in the brief window before
+     the splash mounts. The splash now covers the viewport, so release the
+     <html> background lock — otherwise the body stays navy and bleeds through
+     when the splash later fades out (visible colour flash on the real page). */
+  var htmlEl = document.documentElement;
+  htmlEl.className = htmlEl.className.replace(/\s?sky-preloading/g, "");
 
   /* Shortcuts. */
   var barFill = document.getElementById("skyBarFill");
