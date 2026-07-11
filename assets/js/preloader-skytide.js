@@ -91,9 +91,9 @@
         '</div>' +
       '</div>' +
       '<div class="divider" aria-hidden="true"></div>' +
-      '<p class="tagline">Moving Possibilities. <b>Delivering Excellence.</b></p>' +
+      '<p class="tagline">Moving Possibilities. <b>Beyond Boundaries</b></p>' +
       '<div class="loader-block" id="skyLoaderBlock">' +
-        '<div class="prepare-row"><span class="prepare">Preparing Your Journey</span><span class="pct" id="skyPct">0%</span></div>' +
+        '<div class="prepare-row"><span class="prepare">Delivering Excellence</span><span class="pct" id="skyPct">0%</span></div>' +
         '<div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="skyBar">' +
           '<div class="bar-fill" id="skyBarFill"></div>' +
           '<div class="bar-dot" id="skyBarDot"></div>' +

@@ -903,7 +903,7 @@
 					'<div class="whatsapp-chat_header">' +
 						'<span class="whatsapp-chat_icon"><i class="fa-brands fa-whatsapp"></i></span>' +
 						'<div>' +
-							'<strong>How can I help you?</strong>' +
+							'<strong>Get a free Quote</strong>' +
 							'<small>We usually reply on WhatsApp.</small>' +
 						'</div>' +
 						'<button type="button" class="whatsapp-chat_close" aria-label="Close WhatsApp chat"><i class="fa-solid fa-xmark"></i></button>' +
@@ -918,7 +918,7 @@
 					'</div>' +
 				'</div>' +
 				'<button type="button" class="whatsapp-chat_toggle" aria-expanded="false" aria-label="Open WhatsApp chat">' +
-					'<span>How can I help you?</span>' +
+					'<span>Get a free Quote</span>' +
 					'<i class="fa-brands fa-whatsapp"></i>' +
 				'</button>' +
 			'</div>';
