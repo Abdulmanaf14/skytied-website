@@ -1785,17 +1785,17 @@
 	border-color: var(--color-eight);
 	background-color: var(--color-eight);
 }
-
+/* 
 .faq-one.style-three{
 	background-color: var(--color-four);
-}
+} */
 
 .faq-one.style-four{
 	background-color: var(--color-four);
 }
 
 .faq-one .sec-title_title{
-	color: #D093E8;
+	color: var(--main-color);
 }
 
 .faq-one .sec-title_text{
@@ -1911,7 +1911,7 @@
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
 	transition:all 500ms ease;
-	background-color: var(--main-color);
+	background-color: var(--secondary-color);
 	font-family: 'Font Awesome 6 Free';
 }
 
