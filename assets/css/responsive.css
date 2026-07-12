@@ -1344,4 +1344,14 @@
         flex-direction: column;
         align-items: center;
     }
+
+    /* Add gap between cards in Life at SkyTide section for mobile view */
+    .value-one .row > .col-sm-12 {
+        margin-bottom: 30px; /* Adds space below each card */
+    }
+
+    /* Remove margin from the last card in the section */
+    .value-one .row > .col-sm-12:last-child {
+        margin-bottom: 0px;
+    }
 }
