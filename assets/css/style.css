@@ -4504,8 +4504,8 @@
 	bottom: 0px;
 	width: 350px;
 	z-index: 2;
-	background: rgba(var(--color-four-rgb), 1);
-    background: linear-gradient(to left, rgba(var(--color-four-rgb), 0) 0%, var(--color-four) 100%);
+	/* background: rgba(var(--color-four-rgb), 1);
+    background: linear-gradient(to left, rgba(var(--color-four-rgb), 0) 0%, var(--color-four) 100%); */
 }
 
 .testimonial-three::after{
@@ -4516,8 +4516,8 @@
 	bottom: 0px;
 	width: 350px;
 	z-index: 2;
-	background: rgba(var(--color-four-rgb), 1);
-    background: linear-gradient(to right, rgba(var(--color-four-rgb), 0) 0%, var(--color-four) 100%);
+	/* background: rgba(var(--color-four-rgb), 1);
+    background: linear-gradient(to right, rgba(var(--color-four-rgb), 0) 0%, var(--color-four) 100%); */
 }
 
 .testimonial-three .three-item_carousel-pagination{
