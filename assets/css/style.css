@@ -4540,7 +4540,7 @@
 	-ms-transition:all 300ms ease;
 	-o-transition:all 300ms ease;
 	background: none;
-	border:1px solid rgba(var(--grey-color-rgb), 0.60);
+	border:1px solid rgba(var(--primary-color-rgb), 0.30);
 }
 
 .testimonial-three .swiper-pagination-bullet:hover,
@@ -9043,3 +9043,120 @@ a.news-block_one-title:hover {
     .career-cta h2 { font-size: 28px; }
     .career-stats { padding: 50px 0 30px; }
 }
+
+
+.l-cards {
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.c-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+  margin-top: 20px;
+  width: 100%;
+  height: 90vh;
+  min-height: 600px;
+  background-color: white;
+  border: 1px solid var(--color-dark);
+  
+  .c-card__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    
+    .c-card__tagline {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .c-card__title {
+      font-size: 36px;
+    }
+    
+    .c-card__excerpt {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    .c-card__cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 32px;
+      
+      a {
+        width: max-content;
+        padding: 12px 24px;
+        border: 1px solid black;
+        color: black;
+        font-size: 16px;
+        text-decoration: none;
+      }
+    }
+  }
+    
+  .c-card__figure {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.spacer {
+  width: 100%;
+  height: 100vh;
+}
+.c-card--background {
+  grid-template-columns: 1fr; /* Only one column for the description */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  border: none;
+  max-width: 100vw;
+}
+
+.c-card--background .c-card__description {
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay to improve text readability */
+  padding: 60px;
+  border-radius: 8px; /* Optional: for better visual separation */
+  justify-content: center;
+  text-align: center;
+}
+
+.c-card--background .c-card__tagline,
+.c-card--background .c-card__title,
+.c-card--background .c-card__excerpt {
+  color: white;
+}
+
+.c-card--background .c-card__cta {
+    justify-content: center;
+}
+
+.c-card--background .c-card__cta a {
+  color: white;
+  border-color: white;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.c-card--background .c-card__cta a:hover {
+  background-color: white;
+  color: black;
+}
+
+
