@@ -9168,7 +9168,7 @@ a.news-block_one-title:hover {
     padding: 100px 0 85px;
     background-color: #004467;
     background-image: 
-        url("../images/background/map.jpg");
+        url("../images/background/map2.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -9285,7 +9285,7 @@ a.news-block_one-title:hover {
 }
 @media (max-width: 575px) {
     .operations-one { padding: 70px 0 55px; }
-    .operations-grid { grid-template-columns: 1fr; max-width: 340px; }
+    .operations-grid {  max-width: 440px; }
 }
 
 
