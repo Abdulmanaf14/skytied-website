@@ -9167,25 +9167,22 @@ a.news-block_one-title:hover {
     position: relative;
     padding: 100px 0 85px;
     background-color: #004467;
-    /* Layer 1 (top): faint world map silhouette | Layer 2 (bottom): dot grid */
-    background-image:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='500' viewBox='0 0 1000 500'%3E%3Cg fill='%23ffffff' opacity='0.08'%3E%3Cpath d='M120,72 L250,70 L302,128 L286,186 L256,226 L200,246 L160,212 L138,158 Z'/%3E%3Cpath d='M360,54 L432,52 L434,112 L382,124 L358,96 Z'/%3E%3Cpath d='M250,260 L322,250 L344,304 L330,374 L292,422 L268,400 L258,332 L238,292 Z'/%3E%3Cpath d='M470,110 L560,100 L572,150 L520,172 L478,150 Z'/%3E%3Cpath d='M488,182 L592,182 L602,262 L570,360 L528,402 L498,360 L478,282 Z'/%3E%3Cpath d='M558,90 L852,88 L874,150 L832,222 L760,252 L700,242 L640,210 L600,170 L570,138 Z'/%3E%3Cpath d='M660,212 L704,210 L692,262 L668,260 Z'/%3E%3Cpath d='M740,252 L822,250 L820,292 L760,292 Z'/%3E%3Cpath d='M790,312 L884,302 L894,362 L852,382 L802,372 L786,342 Z'/%3E%3C/g%3E%3C/svg%3E"),
-        radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
-    background-size: cover, 24px 24px;
-    background-position: center center, 0 0;
-    background-repeat: no-repeat, repeat;
+    background-image: 
+        url("../images/background/map.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     overflow: hidden;
 }
-/* Subtle edge fade so the map blends into the navy field */
 .operations-one::before {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(to bottom,
-        rgba(0,68,103,0.55) 0%,
-        rgba(0,68,103,0) 22%,
-        rgba(0,68,103,0) 78%,
-        rgba(0,68,103,0.55) 100%);
+        rgba(0, 0, 0, 0.65) 0%,
+        rgba(0, 0, 0, 0.48) 18%,
+        rgba(0, 0, 0, 0.48) 82%,
+        rgba(0, 0, 0, 0.65) 100%);
     pointer-events: none;
 }
 .operations-one .sec-title { position: relative; z-index: 2; }
